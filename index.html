@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ali Zouine | Software Developer & AI Student</title>
+  <meta name="description"
+    content="Portfolio of Ali Zouine — Software Developer and AI Student passionate about Java, Python, Linux, and intelligent systems." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ── CANVAS BACKGROUND ── -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- ── NAV ── -->
+  <nav id="navbar">
+    <div class="nav-logo">
+      <span class="logo-bracket">&lt;</span>AZ<span class="logo-bracket">/&gt;</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#home" class="nav-link active" data-section="home">Home</a></li>
+      <li><a href="#projects" class="nav-link" data-section="projects">Projets</a></li>
+      <li><a href="#skills" class="nav-link" data-section="skills">Compétences</a></li>
+      <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <main>
+
+    <!-- ══════════════════════════════════════ HOME ══════════════════════════════════════ -->
+    <section id="home" class="section hero-section">
+      <div class="hero-content">
+        <p class="hero-greeting">Bonjour, je suis</p>
+        <h1 class="hero-name">Ali <span class="gradient-text">Zouine</span></h1>
+        <div class="hero-title-wrapper">
+          <span class="hero-title-static">Développeur &amp;</span>
+          <span class="hero-title-animated" id="typingText"></span>
+          <span class="cursor">|</span>
+        </div>
+        <p class="hero-description">
+          Passionné par la construction de systèmes intelligents, l'automatisation et les technologies de demain.
+          J'explore l'intersection entre le <span class="highlight">génie logiciel</span> et
+          l'<span class="highlight">intelligence artificielle</span>.
+        </p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary">
+            <span>Voir mes projets</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </a>
+          <a href="#contact" class="btn btn-outline">Me contacter</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-number" data-count="5">0</span>
+            <span class="stat-label">Projets</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-number" data-count="5">0</span>
+            <span class="stat-label">Technologies</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-number" data-count="100">0</span>
+            <span class="stat-label">% Motivé</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="orbit-ring orbit-1">
+          <div class="orbit-icon" style="--angle:0deg">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" />
+          </div>
+        </div>
+        <div class="orbit-ring orbit-2">
+          <div class="orbit-icon" style="--angle:90deg">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" />
+          </div>
+        </div>
+        <div class="orbit-ring orbit-3">
+          <div class="orbit-icon" style="--angle:180deg">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux" />
+          </div>
+        </div>
+        <div class="orbit-ring orbit-4">
+          <div class="orbit-icon" style="--angle:270deg">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" alt="Bash" />
+          </div>
+        </div>
+        <div class="core-sphere">
+          <span class="core-initials">AZ</span>
+          <div class="core-pulse"></div>
+        </div>
+      </div>
+      <div class="scroll-indicator">
+        <div class="scroll-line"></div>
+        <span>Scroll</span>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════ PROJECTS ══════════════════════════════════════ -->
+    <section id="projects" class="section">
+      <div class="section-header">
+        <span class="section-tag">// 01</span>
+        <h2 class="section-title">Mes <span class="gradient-text">Projets</span></h2>
+        <p class="section-subtitle">Des solutions concrètes à des problèmes réels</p>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- Project 1 -->
+        <article class="project-card" id="proj-java">
+          <div class="card-glow"></div>
+          <div class="card-header">
+            <div class="card-icon java-icon">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" />
+            </div>
+            <div class="card-badges">
+              <span class="badge">Java</span>
+              <span class="badge">Algorithmes</span>
+            </div>
+          </div>
+          <h3 class="card-title">Structures de Données Java</h3>
+          <p class="card-description">
+            Implémentation complète de structures de données fondamentales : listes chaînées, arbres binaires, graphes,
+            tables de hachage et algorithmes de tri optimisés en Java.
+          </p>
+          <ul class="card-features">
+            <li>Listes chaînées &amp; piles dynamiques</li>
+            <li>Arbres AVL auto-équilibrés</li>
+            <li>Algorithmes de tri (Quick, Merge, Heap)</li>
+          </ul>
+          <div class="card-footer">
+            <a href="https://github.com/zouinealifst-create" target="_blank" class="card-link">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" />
+              </svg>
+              GitHub
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="project-card featured" id="proj-crewai">
+          <div class="card-glow"></div>
+          <div class="featured-badge">⭐ Featured</div>
+          <div class="card-header">
+            <div class="card-icon ai-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path
+                  d="M12 2a4 4 0 0 1 4 4v2h2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2V6a4 4 0 0 1 4-4z" />
+                <circle cx="9" cy="13" r="1.5" />
+                <circle cx="15" cy="13" r="1.5" />
+                <path d="M9 17s1 1 3 1 3-1 3-1" />
+              </svg>
+            </div>
+            <div class="card-badges">
+              <span class="badge badge-accent">CrewAI</span>
+              <span class="badge">Python</span>
+              <span class="badge">NLP</span>
+            </div>
+          </div>
+          <h3 class="card-title">Agent Darija Learning</h3>
+          <p class="card-description">
+            Agent IA multi-rôles construit avec CrewAI pour enseigner le dialecte marocain Darija.
+            Utilise des LLMs pour générer des leçons adaptatives, corriger les apprenants et créer des exercices
+            interactifs.
+          </p>
+          <ul class="card-features">
+            <li>Architecture multi-agents CrewAI</li>
+            <li>Génération de leçons adaptatives</li>
+            <li>Correction contextuelle en temps réel</li>
+          </ul>
+          <div class="card-footer">
+            <a href="https://github.com/zouinealifst-create" target="_blank" class="card-link">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" />
+              </svg>
+              GitHub
+            </a>
+            <span class="card-status">En développement</span>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="project-card" id="proj-bash">
+          <div class="card-glow"></div>
+          <div class="card-header">
+            <div class="card-icon bash-icon">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" alt="Bash" />
+            </div>
+            <div class="card-badges">
+              <span class="badge">Bash</span>
+              <span class="badge">Linux</span>
+              <span class="badge">Automatisation</span>
+            </div>
+          </div>
+          <h3 class="card-title">Scripts Bash / Linux</h3>
+          <p class="card-description">
+            Collection de scripts shell pour l'automatisation de tâches système, la gestion de fichiers,
+            le monitoring de processus et la configuration d'environnements Linux.
+          </p>
+          <ul class="card-features">
+            <li>Automatisation de backups</li>
+            <li>Scripts de monitoring système</li>
+            <li>Outils de gestion réseau</li>
+          </ul>
+          <div class="card-footer">
+            <a href="https://github.com/zouinealifst-create" target="_blank" class="card-link">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" />
+              </svg>
+              GitHub
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════ FLAGSHIP PROJECT ══════════════════════════════════════ -->
+    <section id="flagship" class="section flagship-section">
+      <div class="flagship-bg-grid"></div>
+
+      <div class="section-header">
+        <span class="section-tag">// ★ PROJET PHARE</span>
+        <h2 class="section-title">OTA <span class="gradient-text">SUPPORT</span></h2>
+        <p class="section-subtitle">Agent IA Vocal Télécom</p>
+      </div>
+
+      <div class="flagship-wrapper">
+        <!-- Sound Wave Visual -->
+        <div class="flagship-visual">
+          <div class="wave-container" id="waveContainer">
+            <canvas id="waveCanvas" aria-label="Onde sonore interactive"></canvas>
+            <div class="wave-label">
+              <span class="wave-pulse-dot"></span>
+              <span>LIVE — Interaction Vocale</span>
+            </div>
+          </div>
+          <div class="digital-twin-ring">
+            <div class="twin-ring twin-ring-1"></div>
+            <div class="twin-ring twin-ring-2"></div>
+            <div class="twin-ring twin-ring-3"></div>
+            <div class="twin-core">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+                <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
+                <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+                <line x1="12" y1="19" x2="12" y2="23"/>
+                <line x1="8" y1="23" x2="16" y2="23"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- Content -->
+        <div class="flagship-content">
+          <div class="flagship-hackathon-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+            </svg>
+            Hackathon CGI-ENSA 2026
+          </div>
+
+          <h3 class="flagship-title">
+            OTA SUPPORT — <span class="gradient-text">Révolution du Service Client</span>
+          </h3>
+
+          <p class="flagship-accroche">
+            Un agent IA vocal conçu pour <span class="highlight">automatiser le dépannage technique télécom</span> 
+            en temps réel avec une latence quasi nulle.
+          </p>
+
+          <div class="flagship-details">
+            <div class="flagship-detail-item">
+              <div class="detail-icon">🎙️</div>
+              <div>
+                <h4>Traitement Vocal</h4>
+                <p>Implémentation de <strong>Groq</strong> (Whisper + LLM) pour une interaction instantanée.</p>
+              </div>
+            </div>
+            <div class="flagship-detail-item">
+              <div class="detail-icon">🧠</div>
+              <div>
+                <h4>Intelligence RAG</h4>
+                <p>Recherche vectorielle précise via <strong>Gemini Embeddings</strong> et <strong>Pinecone</strong>.</p>
+              </div>
+            </div>
+            <div class="flagship-detail-item">
+              <div class="detail-icon">⚙️</div>
+              <div>
+                <h4>Infrastructure</h4>
+                <p>Backend robuste sous <strong>FastAPI</strong> et <strong>PostgreSQL</strong> pour le monitoring en temps réel.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flagship-tech-badges">
+            <span class="tech-badge groq-badge">
+              <span class="badge-glow"></span>
+              Groq
+            </span>
+            <span class="tech-badge gemini-badge">
+              <span class="badge-glow"></span>
+              Gemini
+            </span>
+            <span class="tech-badge pinecone-badge">
+              <span class="badge-glow"></span>
+              Pinecone
+            </span>
+            <span class="tech-badge fastapi-badge">
+              <span class="badge-glow"></span>
+              FastAPI
+            </span>
+            <span class="tech-badge postgres-badge">
+              <span class="badge-glow"></span>
+              PostgreSQL
+            </span>
+            <span class="tech-badge whisper-badge">
+              <span class="badge-glow"></span>
+              Whisper
+            </span>
+          </div>
+
+          <div class="flagship-cta">
+            <a href="#contact" class="btn btn-primary flagship-btn">
+              <span>Détails du projet</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════ DARIJA PROJECT ══════════════════════════════════════ -->
+    <section id="darija" class="section darija-section">
+      <!-- Floating Arabic Characters Background -->
+      <div class="darija-arabic-bg" aria-hidden="true">
+        <span class="arabic-char" style="--x:8%;--y:12%;--dur:18s;--delay:0s">ﺩ</span>
+        <span class="arabic-char" style="--x:22%;--y:68%;--dur:22s;--delay:2s">ﺭ</span>
+        <span class="arabic-char" style="--x:75%;--y:20%;--dur:20s;--delay:1s">ﻉ</span>
+        <span class="arabic-char" style="--x:88%;--y:55%;--dur:16s;--delay:3s">ﻡ</span>
+        <span class="arabic-char" style="--x:45%;--y:80%;--dur:24s;--delay:0.5s">ﻝ</span>
+        <span class="arabic-char" style="--x:60%;--y:15%;--dur:19s;--delay:4s">ﻙ</span>
+        <span class="arabic-char" style="--x:15%;--y:45%;--dur:21s;--delay:1.5s">ﺕ</span>
+        <span class="arabic-char" style="--x:92%;--y:82%;--dur:17s;--delay:2.5s">ﺏ</span>
+        <span class="arabic-char" style="--x:35%;--y:35%;--dur:23s;--delay:3.5s">ﻥ</span>
+        <span class="arabic-char" style="--x:55%;--y:60%;--dur:15s;--delay:0.8s">ﺹ</span>
+      </div>
+
+      <div class="section-header">
+        <span class="section-tag">// ◆ PROJET NLP</span>
+        <h2 class="section-title">Analyseur <span class="darija-gradient-text">Multi-Agents</span></h2>
+        <p class="section-subtitle">du Darija</p>
+      </div>
+
+      <div class="darija-wrapper">
+        <!-- Knowledge Graph Canvas -->
+        <div class="darija-visual">
+          <div class="kg-container" id="kgContainer">
+            <canvas id="kgCanvas" aria-label="Visualisation Knowledge Graph"></canvas>
+            <div class="kg-label">
+              <span class="kg-pulse-dot"></span>
+              <span>KNOWLEDGE GRAPH — Réseau Sémantique</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Content -->
+        <div class="darija-content">
+          <h3 class="darija-title">
+            Extraction & Analyse Linguistique <span class="darija-gradient-text">du Darija via IA</span>
+          </h3>
+
+          <p class="darija-accroche">
+            Automatisation de la <span class="darija-highlight">collecte et de la structuration</span> de données 
+            dialectales marocaines pour l'entraînement de modèles NLP.
+          </p>
+
+          <div class="darija-details">
+            <div class="darija-detail-item">
+              <div class="darija-detail-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="24" height="24">
+                  <circle cx="12" cy="12" r="3"/>
+                  <path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/>
+                </svg>
+              </div>
+              <div>
+                <h4>Orchestration IA</h4>
+                <p>Système multi-agents développé avec <strong>CrewAI</strong> (Python) pour coordonner le scraping et l'analyse.</p>
+              </div>
+            </div>
+            <div class="darija-detail-item">
+              <div class="darija-detail-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="24" height="24">
+                  <rect x="2" y="3" width="20" height="14" rx="2"/>
+                  <line x1="8" y1="21" x2="16" y2="21"/>
+                  <line x1="12" y1="17" x2="12" y2="21"/>
+                  <polyline points="7 8 10 11 7 14"/>
+                  <line x1="13" y1="14" x2="17" y2="14"/>
+                </svg>
+              </div>
+              <div>
+                <h4>Data Engineering</h4>
+                <p>Création de <strong>datasets structurés</strong> à partir de sources web non formatées.</p>
+              </div>
+            </div>
+            <div class="darija-detail-item">
+              <div class="darija-detail-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="24" height="24">
+                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                  <line x1="9" y1="9" x2="15" y2="9"/>
+                  <line x1="9" y1="13" x2="13" y2="13"/>
+                </svg>
+              </div>
+              <div>
+                <h4>Analyse Sémantique</h4>
+                <p>Traitement de données textuelles pour identifier les <strong>structures propres au dialecte Darija</strong>.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="darija-tech-badges">
+            <span class="tech-badge darija-python-badge">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" width="16" height="16"/>
+              Python
+            </span>
+            <span class="tech-badge darija-crewai-badge">
+              <span class="badge-glow"></span>
+              🤖 CrewAI
+            </span>
+            <span class="tech-badge darija-bs4-badge">
+              <span class="badge-glow"></span>
+              🍜 BeautifulSoup
+            </span>
+            <span class="tech-badge darija-nlp-badge">
+              <span class="badge-glow"></span>
+              🧠 NLP
+            </span>
+            <span class="tech-badge darija-scraping-badge">
+              <span class="badge-glow"></span>
+              🕷️ Web Scraping
+            </span>
+          </div>
+
+          <div class="darija-cta">
+            <a href="https://github.com/zouinealifst-create" target="_blank" class="btn btn-darija">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
+                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+              </svg>
+              <span>Voir sur GitHub</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════ SKILLS ══════════════════════════════════════ -->
+    <section id="skills" class="section">
+      <div class="section-header">
+        <span class="section-tag">// 02</span>
+        <h2 class="section-title">Mes <span class="gradient-text">Compétences</span></h2>
+        <p class="section-subtitle">Technologies et outils que je maîtrise</p>
+      </div>
+
+      <div class="skills-container">
+        <!-- View Toggle Buttons -->
+        <div class="skills-view-toggle" role="group" aria-label="Changer la vue des compétences">
+          <button class="view-btn active" id="btn-radar" aria-pressed="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="12,2 22,8.5 22,15.5 12,22 2,15.5 2,8.5" />
+            </svg>
+            Radar
+          </button>
+          <button class="view-btn" id="btn-bars" aria-pressed="false">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="12" x2="21" y2="12" />
+              <line x1="3" y1="6" x2="15" y2="6" />
+              <line x1="3" y1="18" x2="18" y2="18" />
+            </svg>
+            Barres
+          </button>
+        </div>
+
+        <!-- Radar Chart View -->
+        <div class="skills-radar-view" id="skillsRadarView">
+          <div class="radar-wrapper">
+            <canvas id="radarChart" width="500" height="500" aria-label="Graphique radar des compétences"></canvas>
+            <div class="radar-legend" id="radarLegend"></div>
+          </div>
+          <div class="radar-tooltip" id="radarTooltip"></div>
+        </div>
+
+        <div class="skills-grid" id="skillsBarsView" style="display:none;">
+          <div class="skill-card" id="skill-java">
+            <div class="skill-icon-wrap">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" />
+            </div>
+            <div class="skill-info">
+              <span class="skill-name">Java</span>
+              <span class="skill-level">Avancé</span>
+            </div>
+            <div class="skill-bar-wrap">
+              <div class="skill-bar" data-width="85">
+                <div class="skill-bar-fill"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-card" id="skill-python">
+            <div class="skill-icon-wrap">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" />
+            </div>
+            <div class="skill-info">
+              <span class="skill-name">Python</span>
+              <span class="skill-level">Avancé</span>
+            </div>
+            <div class="skill-bar-wrap">
+              <div class="skill-bar" data-width="80">
+                <div class="skill-bar-fill"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-card" id="skill-sql">
+            <div class="skill-icon-wrap">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL" />
+            </div>
+            <div class="skill-info">
+              <span class="skill-name">SQL</span>
+              <span class="skill-level">Intermédiaire</span>
+            </div>
+            <div class="skill-bar-wrap">
+              <div class="skill-bar" data-width="70">
+                <div class="skill-bar-fill"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-card" id="skill-linux">
+            <div class="skill-icon-wrap">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux" />
+            </div>
+            <div class="skill-info">
+              <span class="skill-name">Linux / Ubuntu</span>
+              <span class="skill-level">Avancé</span>
+            </div>
+            <div class="skill-bar-wrap">
+              <div class="skill-bar" data-width="82">
+                <div class="skill-bar-fill"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-card" id="skill-latex">
+            <div class="skill-icon-wrap latex-icon-wrap">
+              <svg viewBox="0 0 256 256" fill="none">
+                <text x="10" y="180" font-family="JetBrains Mono,monospace" font-size="140" font-weight="bold"
+                  fill="#00e5ff">L</text>
+                <text x="90" y="140" font-family="JetBrains Mono,monospace" font-size="80" font-weight="bold"
+                  fill="#aaaaaa">A</text>
+                <text x="145" y="180" font-family="JetBrains Mono,monospace" font-size="140" font-weight="bold"
+                  fill="#00e5ff">T</text>
+                <text x="208" y="155" font-family="JetBrains Mono,monospace" font-size="60" font-weight="bold"
+                  fill="#aaaaaa">EX</text>
+              </svg>
+            </div>
+            <div class="skill-info">
+              <span class="skill-name">LaTeX</span>
+              <span class="skill-level">Intermédiaire</span>
+            </div>
+            <div class="skill-bar-wrap">
+              <div class="skill-bar" data-width="65">
+                <div class="skill-bar-fill"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-card" id="skill-bash">
+            <div class="skill-icon-wrap">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" alt="Bash" />
+            </div>
+            <div class="skill-info">
+              <span class="skill-name">Bash Scripting</span>
+              <span class="skill-level">Avancé</span>
+            </div>
+            <div class="skill-bar-wrap">
+              <div class="skill-bar" data-width="78">
+                <div class="skill-bar-fill"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tags-cloud">
+          <span class="tag-item" style="--delay:0s; --size:1.1rem">Machine Learning</span>
+          <span class="tag-item" style="--delay:.08s; --size:0.9rem">CrewAI</span>
+          <span class="tag-item" style="--delay:.16s; --size:1rem">OOP</span>
+          <span class="tag-item" style="--delay:.24s; --size:0.85rem">Git</span>
+          <span class="tag-item" style="--delay:.32s; --size:1.05rem">NLP</span>
+          <span class="tag-item" style="--delay:.40s; --size:0.9rem">Docker</span>
+          <span class="tag-item" style="--delay:.48s; --size:0.95rem">Data Structures</span>
+          <span class="tag-item" style="--delay:.56s; --size:0.85rem">LLMs</span>
+          <span class="tag-item" style="--delay:.64s; --size:1rem">Algorithms</span>
+          <span class="tag-item" style="--delay:.72s; --size:0.9rem">Shell</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════ CONTACT ══════════════════════════════════════ -->
+    <section id="contact" class="section">
+      <div class="section-header">
+        <span class="section-tag">// 03</span>
+        <h2 class="section-title">Me <span class="gradient-text">Contacter</span></h2>
+        <p class="section-subtitle">Travaillons ensemble sur votre prochain projet</p>
+      </div>
+
+      <div class="contact-wrapper">
+        <div class="contact-info">
+          <div class="info-card">
+            <div class="info-icon">📍</div>
+            <div>
+              <p class="info-label">Localisation</p>
+              <p class="info-value">Maroc</p>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="info-icon">🎓</div>
+            <div>
+              <p class="info-label">Statut</p>
+              <p class="info-value">Étudiant en IA</p>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="info-icon">📧</div>
+            <div>
+              <p class="info-label">Email</p>
+              <p class="info-value"><a href="mailto:zouine.ali.fst@uhp.ac.ma" style="color:inherit;text-decoration:none;">zouine.ali.fst@uhp.ac.ma</a></p>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="info-icon">📱</div>
+            <div>
+              <p class="info-label">Téléphone</p>
+              <p class="info-value"><a href="tel:+2120705503589" style="color:inherit;text-decoration:none;">0705503589</a></p>
+            </div>
+          </div>
+          <div class="social-links">
+            <a href="https://github.com/zouinealifst-create" target="_blank" class="social-btn" id="github-link"
+              aria-label="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" />
+              </svg>
+              <span>GitHub</span>
+            </a>
+            <a href="https://www.linkedin.com/in/ali-zouine-7974a231a" target="_blank" class="social-btn" id="linkedin-link"
+              aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+              </svg>
+              <span>LinkedIn</span>
+            </a>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Nom</label>
+              <input type="text" id="name" name="name" placeholder="Votre nom" required />
+              <span class="input-focus-line"></span>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="votre@email.com" required />
+              <span class="input-focus-line"></span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="subject">Sujet</label>
+            <input type="text" id="subject" name="subject" placeholder="Objet de votre message" />
+            <span class="input-focus-line"></span>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Décrivez votre projet ou votre question..."
+              required></textarea>
+            <span class="input-focus-line"></span>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+            <span>Envoyer le message</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" />
+            </svg>
+          </button>
+          <div class="form-success" id="formSuccess">
+            <span>✓</span> Message envoyé avec succès !
+          </div>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer">
+    <p>
+      <span class="logo-bracket">&lt;</span>AZ<span class="logo-bracket">/&gt;</span>
+      Ali Zouine &mdash; Conçu &amp; développé avec 💙
+    </p>
+    <p class="footer-copy">© 2025 Ali Zouine. Tous droits réservés.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
