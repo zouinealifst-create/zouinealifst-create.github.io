@@ -150,7 +150,7 @@ const revealObserver = new IntersectionObserver(
 );
 
 // Auto-add reveal class to cards & sections
-document.querySelectorAll('.project-card, .skill-card, .info-card, .social-btn, .contact-form, .tags-cloud, .hero-stats, .flagship-detail-item, .flagship-tech-badges, .flagship-visual, .flagship-hackathon-badge, .flagship-title, .flagship-accroche, .flagship-cta, .darija-detail-item, .darija-tech-badges, .darija-visual, .darija-title, .darija-accroche, .darija-cta').forEach(el => {
+document.querySelectorAll('.project-card, .skill-card, .info-card, .social-btn, .contact-form, .tags-cloud, .hero-stats, .flagship-detail-item, .flagship-tech-badges, .flagship-visual, .flagship-hackathon-badge, .flagship-title, .flagship-accroche, .flagship-cta, .darija-detail-item, .darija-tech-badges, .darija-visual, .darija-title, .darija-accroche, .darija-cta, .cert-badge').forEach(el => {
   el.classList.add('reveal');
   revealObserver.observe(el);
 });
@@ -320,7 +320,7 @@ console.log('%c⚡ Ali Zouine Portfolio loaded', 'background:#050a0f;color:#00e5
     { name: 'Java', pct: 85, color: '#e53935', icon: String.fromCodePoint(0x2615) },
     { name: 'Python', pct: 80, color: '#00e5ff', icon: String.fromCodePoint(0x1F40D) },
     { name: 'Linux/Bash', pct: 82, color: '#ffca28', icon: String.fromCodePoint(0x1F427) },
-    { name: 'SQL', pct: 70, color: '#00ffb3', icon: String.fromCodePoint(0x1F5C4) },
+    { name: 'MySQL/T-SQL', pct: 70, color: '#00ffb3', icon: String.fromCodePoint(0x1F5C4) },
     { name: 'Machine Learning', pct: 68, color: '#7c3aed', icon: String.fromCodePoint(0x1F916) },
     { name: 'LaTeX', pct: 65, color: '#1565ff', icon: String.fromCodePoint(0x1F4C4) },
   ];

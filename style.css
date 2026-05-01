@@ -1052,6 +1052,90 @@ main {
 }
 
 /* ══════════════════════════════════════
+   AWS CERTIFICATION BADGE
+══════════════════════════════════════ */
+.certification-section {
+  margin-top: 2.5rem;
+}
+
+.cert-badge {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  max-width: 580px;
+  margin: 0 auto;
+  padding: 1.3rem 2rem;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, rgba(255, 153, 0, 0.04), rgba(255, 153, 0, 0.01));
+  border: 1px solid rgba(255, 153, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  transition: all var(--transition);
+}
+
+.cert-badge::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, #ff9900, #ffb84d);
+  border-radius: 4px 0 0 4px;
+}
+
+.cert-badge:hover {
+  border-color: rgba(255, 153, 0, 0.45);
+  transform: translateY(-3px);
+  box-shadow: 0 0 30px rgba(255, 153, 0, 0.12), 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.cert-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background: rgba(255, 153, 0, 0.08);
+  border: 1px solid rgba(255, 153, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #ff9900;
+}
+
+.cert-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.cert-label {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: #ff9900;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  opacity: 0.8;
+}
+
+.cert-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.cert-issuer {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+}
+
+.cert-aws-logo {
+  flex-shrink: 0;
+}
+
+/* ══════════════════════════════════════
    FLAGSHIP PROJECT — OTA SUPPORT
 ══════════════════════════════════════ */
 .flagship-section {
